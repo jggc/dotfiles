@@ -1,0 +1,34 @@
+{
+    // http://www.jshint.com/docs/options/ for more documentation
+    
+    "globals": {
+        // your globals here
+    },
+    
+    "bitwise" : false, // allow usage of & ^ | (bitwise operators)
+    "curly" : true, // enforce usage of {} for statements like if, for
+    "eqeqeq" : true, // enforce usage of === and !== instead of == and != which are not type-aware
+    "es3" : false, // Do not support crap
+    "forin" : true, // safe use of for in
+    "freeze" : true, // disallow overwriting prototypes of nativse like Date, Array
+    "immed" : true, // Force usage of () to call a function
+    "latedef" : true, // Disallow usage of a variable before its definition
+    "newcap" : true, // capitalize name of constructors
+    "noarg" : true, // Disallow arguments.caller and arguments.callee (deprecated)
+    "noempty" : true, // no empty block
+    "nonbsp" : true, // Disallow "non breaking whitespace" : some mac crap
+    "nonew" : true, // Disallow calling a constructor for side effect
+    "plusplus" : false, // IMO ++ and -- are improving the code readability
+    "quotmark" : false, // no need for "" and '' usage consistency
+    "undef" : true, // Warn about undefined variables
+    "unused" : true, // warn about defined but not used variables
+    "strict" : true, // always force "use strict" which makes javascript much cleaner
+    "trailing" : true, // warn about trailing whitespaces
+    
+    "gcl" : true, // want to be compatible with Google Closure Compiler
+    
+    "browser" : true, // browser globals like document
+    "devel" : true, // console, alert globals
+    "jquery" : true // jquery globals
+      
+}
