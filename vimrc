@@ -11,9 +11,10 @@ inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
-inoremap [	[]<Left>
+inoremap [      []<Left>
+inoremap []     []
 
-inoremap <C-s>	#{tr.t("")}<Esc>hhi
+inoremap <C-s>	#{tr.t("")}<Esc>hhi " Shortcut for translations in JSF files
 
 " For easier browsing between splits
 nnoremap <C-l>	<C-w>l
@@ -31,13 +32,26 @@ nnoremap <C-p>	:tabp<CR>
 
 " For easier buffer browsing
 nnoremap <F12>	:bnext<CR>
+nnoremap <S-F12>	:bprevious<CR>
+
+
+" Comment 
+vnoremap <C-c>	c//<Tab><Esc>
+
 
 " Some plugins
 call vundle#rc()
 Bundle 'tpope/vim-vividchalk'
 Bundle 'vim-scripts/WuYe'
-Bundle 'vim-scripts/javacomplete'
+" Bundle 'vim-scripts/javacomplete'
 Bundle 'vim-scripts/AutoComplPop'
+Bundle 'pangloss/vim-javascript'
+Bundle 'othree/html5.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/Vim-JDE' " Have yet to get it to work properly
+
+" autochdir helps for filename completion
+set autochdir
 
 " autocmd FileType java set omnifunc=javacomplete#Complete
 set omnifunc=syntaxcomplete#Complete " Awesome simple builtin completion
