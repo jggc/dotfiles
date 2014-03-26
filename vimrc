@@ -48,7 +48,9 @@ Bundle 'vim-scripts/AutoComplPop'
 Bundle 'pangloss/vim-javascript'
 Bundle 'othree/html5.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/Vim-JDE' " Have yet to get it to work properly
+
+" Have yet to get it to work properly
+Bundle 'vim-scripts/Vim-JDE'
 
 " autochdir helps for filename completion
 set autochdir
