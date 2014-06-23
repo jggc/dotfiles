@@ -2,7 +2,22 @@
     // http://www.jshint.com/docs/options/ for more documentation
     
     "globals": {
-        // your globals here
+		"Territory" : false, 
+		"Tile" : false, 
+		"Game" : false,
+		"SvgMap" : false,
+		"Snap" : false,
+		"game" : true,
+		"mina" : false,
+		"utils" : false,
+		"ObjectId" : false,
+		"SelectTerritoryTools" : false,
+		"ExchangeTerritoryTools" : false,
+		"AssignTerritoryMill" : false,
+		"AssignBackhaul" : false,
+		"EllipseButton" : false,
+		"HexagonButton" : false,
+		"BackhaulPath" : false
     },
     
     "bitwise" : false, // allow usage of & ^ | (bitwise operators)
@@ -32,3 +47,4 @@
     "jquery" : true // jquery globals
       
 }
+
