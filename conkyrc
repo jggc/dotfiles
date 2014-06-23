@@ -1,0 +1,48 @@
+
+use_xft yes
+xftfont 123:size=8
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type override
+own_window_class conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_type desktop
+background no 
+double_buffer yes
+minimum_size 580 500
+draw_shades no
+draw_outline no
+draw_borders no 
+draw_graph_borders no
+default_color white
+default_shade_color red
+default_outline_color green
+alignment top_left
+gap_x 30
+gap_y 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes
+#use_spacer yes
+ 
+TEXT 
+${voffset 1}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color 33B5E5}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=18}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -148}${time %a}.${font}
+${voffset 13}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}Kernel${tab 55}$color${kernel}${tab 90}${color 33B5E5}Uptime${tab 50}$color${uptime}
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}Ram${tab 55}$color$mem / $memmax${tab 90}${color 33B5E5}Swap${tab 50}$color${swap} / $swapmax
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}Rootfs${tab 55}$color${fs_used /} / ${fs_size /}${tab 90}${color 33B5E5}Home${tab 50}$color${fs_used /home/} / ${fs_size /home/}
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}Up${tab 55}$color${upspeedf wlo1} / ${totalup wlo1}${tab 90}${color 33B5E5}Down${tab 50}$color${downspeedf wlo1}/ ${totaldown wlo1}
+
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}cpu0 ${tab 55}$color${cpubar cpu0 15,120}${tab 90}${color 33B5E5} cpu1 ${tab 50}$color${cpubar cpu1 15,120}
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}cpu2 ${tab 55}$color${cpubar cpu2 15,120}${tab 90}${color 33B5E5} cpu3 ${tab 50}$color${cpubar cpu3 15,120}
+
+$if_mpd_playing
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${color 33B5E5}Random : ${mpd_random}${tab 50}- ${mpd_smart 100}
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}Status : ${mpd_status}${tab 50}- ${mpd_album}
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=15}${mpd_elapsed} ${tab 20}$color${mpd_bar 15,400}${color 33B5E5}  ${mpd_length}
+$endif
+
