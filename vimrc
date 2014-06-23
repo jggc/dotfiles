@@ -1,5 +1,4 @@
 set nu
-set autoindent
 set nocompatible
 set background=dark
 set vb " To disable system beep - vim screen flashes instead
@@ -14,7 +13,8 @@ inoremap {}     {}
 inoremap [      []<Left>
 inoremap []     []
 
-inoremap <C-s>	#{tr.t("")}<Esc>hhi " Shortcut for translations in JSF files
+" Shortcut for translations in JSF files
+inoremap <C-s>	#{tr.t("")}<Esc>hhi 
 
 " For easier browsing between splits
 nnoremap <C-l>	<C-w>l
@@ -49,9 +49,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'othree/html5.vim'
 Bundle 'scrooloose/syntastic'
 
-" Have yet to get it to work properly
-Bundle 'vim-scripts/Vim-JDE'
-
 " autochdir helps for filename completion
 set autochdir
 
@@ -65,11 +62,13 @@ colorscheme desert
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-set tabstop=4       " The width of a TAB is set to 4.
+set tabstop=2       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
                     " a width of 4.
 
-set shiftwidth=4    " Indents will have a width of 4
+set shiftwidth=2    " Indents will have a width of 4
 
-set softtabstop=4   " Sets the number of columns for a TAB
+set softtabstop=2   " Sets the number of columns for a TAB
+
+set shell=/bin/bash
