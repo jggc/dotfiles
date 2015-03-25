@@ -2,7 +2,25 @@ set nu
 set nocompatible
 set background=dark
 set vb " To disable system beep - vim screen flashes instead
+set shell=bash " On fish, Vundle does not work
 syntax on
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+" Some plugins
+call vundle#begin()
+" Let Vundle manage itself
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-vividchalk'
+Plugin 'vim-scripts/WuYe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/html5.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
 
 filetype plugin indent on
 " Mini code snippets that I find suitable for any kind of editing.
@@ -39,15 +57,6 @@ nnoremap <S-F12>	:bprevious<CR>
 vnoremap <C-c>	c//<Tab><Esc>
 
 
-" Some plugins
-call vundle#rc()
-Bundle 'tpope/vim-vividchalk'
-Bundle 'vim-scripts/WuYe'
-" Bundle 'vim-scripts/javacomplete'
-Bundle 'vim-scripts/AutoComplPop'
-Bundle 'pangloss/vim-javascript'
-Bundle 'othree/html5.vim'
-Bundle 'scrooloose/syntastic'
 
 " autochdir helps for filename completion
 set autochdir
@@ -59,16 +68,12 @@ set omnifunc=syntaxcomplete#Complete " Awesome simple builtin completion
 colorscheme desert
 
 " For simple highlight over 80 characters
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=black guibg=black
+"match OverLength /\%81v.\+/
 
-set tabstop=2       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
+set expandtab ts=4 sw=4 ai " set tabs to 4 spaces
 
-set shiftwidth=2    " Indents will have a width of 4
-
-set softtabstop=2   " Sets the number of columns for a TAB
+set backupdir=/home/jgcouture/.vim/backup
+set directory=/home/jgcouture/.vim/backup
 
 set shell=/bin/bash

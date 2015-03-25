@@ -17,7 +17,9 @@
 		"AssignBackhaul" : false,
 		"EllipseButton" : false,
 		"HexagonButton" : false,
-		"BackhaulPath" : false
+		"BackhaulPath" : false,
+		"google" : false,
+		"prologis" : false
     },
     
     "bitwise" : false, // allow usage of & ^ | (bitwise operators)
