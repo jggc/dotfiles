@@ -2,38 +2,39 @@ set nu
 set nocompatible
 set background=dark
 set vb " To disable system beep - vim screen flashes instead
-set shell=bash " On fish, Vundle does not work
+
 syntax on
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+
+let g:python_host_prog='/bin/python2'
+set rtp+=~/.nvim/bundle/Vundle.vim
 " Some plugins
 call vundle#begin()
 " Let Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-vividchalk'
-Plugin 'vim-scripts/WuYe'
+"Plugin 'tpope/vim-vividchalk'
+"Plugin 'vim-scripts/WuYe'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/html5.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'othree/html5.vim'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
 filetype plugin indent on
 " Mini code snippets that I find suitable for any kind of editing.
 inoremap {      {}<Left>
-" inoremap {<CR>  {<CR>}<Esc>O
-" inoremap {{     {
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
 inoremap {}     {}
 inoremap [      []<Left>
 inoremap []     []
 
 " Shortcut for translations in JSF files
-inoremap <C-s>	#{tr.t("")}<Esc>hhi 
+"inoremap <C-s>	#{tr.t("")}<Esc>hhi 
 
 " For easier browsing between splits
 nnoremap <C-l>	<C-w>l
@@ -50,7 +51,8 @@ nnoremap <C-n>	:tabn<CR>
 nnoremap <C-p>	:tabp<CR>
 
 " For easier buffer browsing
-nnoremap <C-m>	:bnext<CR>
+nnoremap <F12>	:bnext<CR>
+nnoremap <S-F12>	:bprevious<CR>
 
 
 " Comment 
@@ -62,10 +64,10 @@ vnoremap <C-c>	c//<Tab><Esc>
 " set autochdir
 
 " autocmd FileType java set omnifunc=javacomplete#Complete
-set omnifunc=syntaxcomplete#Complete " Awesome simple builtin completion
+"set omnifunc=syntaxcomplete#Complete " Awesome simple builtin completion
 
 " colorscheme vividchalk
-colorscheme desert
+"colorscheme desert
 
 " For simple highlight over 80 characters
 "highlight OverLength ctermbg=black guibg=black
@@ -73,9 +75,7 @@ colorscheme desert
 
 set expandtab ts=4 sw=4 ai " set tabs to 4 spaces
 
-set backupdir=/home/jgcouture/.vim/backup
-set directory=/home/jgcouture/.vim/backup
-
-set breakindent
+set backupdir=/home/jgcouture/.nvim/backup
+set directory=/home/jgcouture/.nvim/backup
 
 set shell=/bin/bash
